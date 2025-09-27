@@ -1,0 +1,32 @@
+[package]
+name = "projectboard-cli"
+version = "0.1.0"
+edition = "2021"
+description = "A terminal-first project board tool that wraps around git workflows"
+authors = ["ProjectBoard Team"]
+license = "MIT"
+repository = "https://github.com/projectboard/projectboard-cli"
+
+[[bin]]
+name = "pb"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite", "migrate", "chrono"] }
+git2 = "0.18"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+ratatui = "0.24"
+crossterm = "0.27"
+uuid = { version = "1.0", features = ["v4"] }
+dirs = "5.0"
+
+[dev-dependencies]
+tempfile = "3.8"
+assert_cmd = "2.0"
+predicates = "3.0"

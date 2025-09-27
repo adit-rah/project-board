@@ -1,0 +1,19 @@
+# Rust
+/target/
+Cargo.lock
+
+# ProjectBoard
+.projectboard/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
